@@ -1,0 +1,28 @@
+{
+    "name": "shei/aws-marketplace-tools",
+    "description": "aws marketplace integration tools",
+    "require": {
+        "aws/aws-sdk-php": "^3.314",
+        "laravel/framework": "^10.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Shei\\AwsMarketplaceTools\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "shei254",
+            "email": "chegeeric66@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Shei\\AwsMarketplaceTools\\Providers\\AwsMarketplaceToolsProvider",
+                "Shei\\AwsMarketplaceTools\\Providers\\EntitlementServiceProvider",
+                "Shei\\AwsMarketplaceTools\\Providers\\MeteringServiceProvider"
+            ]
+        }
+    }
+}
