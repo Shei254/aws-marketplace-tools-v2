@@ -38,6 +38,7 @@ class AwsMarketplaceController extends Controller
                 throw new Exception("You already have an account with us");
             }
 
+            //Fetch User Entitilements
             $entitlement_results = $this->entitlementService->getCustomerEntitlements($customer_results["CustomerIdentifier"], $customer_results["ProductCode"]);
             dd($entitlement_results);
 
