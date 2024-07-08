@@ -3,7 +3,7 @@
     "description": "aws marketplace integration tools",
     "require": {
         "aws/aws-sdk-php": "^3.314",
-        "laravel/framework": "^10.10"
+        "laravel/framework": "^11"
     },
     "autoload": {
         "psr-4": {
