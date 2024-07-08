@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('aws_subscriptions', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger("aws_customer_id");
+            $table->string("aws_customer_id");
             $table->string("dimension");
             $table->unsignedInteger("quantity")->default(0);
             $table->timestamps();
