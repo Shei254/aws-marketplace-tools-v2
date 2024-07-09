@@ -13,12 +13,10 @@ return new class extends Migration
     {
         Schema::create('aws_subscriptions', function (Blueprint $table) {
             $table->id();
-            $table->string("aws_customer_id");
+            $table->foreignId("aws_customer_id")->references("id")->on("aws_customers")->onDelete("CASCADE")->onUpdate("CASCADE");;
             $table->string("dimension");
             $table->unsignedInteger("quantity")->default(0);
             $table->timestamps();
-
-            $table->foreign("aws_customer_id")->references("id")->on("aws_customers")->onDelete("CASCADE")->onUpdate("CASCADE");
         });
     }
 
