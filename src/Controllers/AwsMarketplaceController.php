@@ -43,7 +43,6 @@ class AwsMarketplaceController extends Controller
 
             //Fetch User Entitilements
             $entitlement_results = $this->entitlementService->getCustomerEntitlements($customer_results["CustomerIdentifier"], $customer_results["ProductCode"]);
-            dd($entitlement_results);
 
             Log::debug("{ aws } Total no. of entitlements: ".count($entitlement_results['Entitlements']));
             if (!count($entitlement_results['Entitlements'])) {
