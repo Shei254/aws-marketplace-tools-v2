@@ -20,7 +20,7 @@ class EntitlementService
     {
         return $this->client->getEntitlements([
             'Filter' => [
-                'CUSTOMER_IDENTIFIER' => $customerId,
+                'CUSTOMER_IDENTIFIER' => [ $customerId ],
             ],
             'ProductCode' => $productCode,
         ]);
