@@ -19,7 +19,9 @@ class EntitlementService
     public function getCustomerEntitlements (string $customerId, string $productCode): \Aws\Result
     {
         return $this->client->getEntitlements([
-            'CustomerIdentifier' => $customerId,
+            'Filter' => [
+                'CUSTOMER_IDENTIFIER' => $customerId,
+            ],
             'ProductCode' => $productCode,
         ]);
     }
