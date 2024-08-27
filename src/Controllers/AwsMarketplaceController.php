@@ -41,6 +41,7 @@ class AwsMarketplaceController extends Controller
             //Fetch User Entitilements
             $entitlement_results = $this->entitlementService->getCustomerEntitlements($customer_results["CustomerIdentifier"], $customer_results["ProductCode"]);
 
+            dd($entitlement_results);
             if (!count($entitlement_results['Entitlements'])) {
                 throw new Exception('Could not find an active subscription. If you already registered please try again');
             }
