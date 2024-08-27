@@ -28,6 +28,7 @@ class AwsMarketplaceController extends Controller
             }
 
             $customer_results = $this->meteringService->resolveCustomer($request['x-amzn-marketplace-token']);
+            dd($customer_results);
             if (!$customer_results["CustomerIdentifier"]) {
                 throw new Exception("Error resolving customer");
             }
